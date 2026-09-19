@@ -10,7 +10,9 @@ Vercel token Scope lists teams and existing **Vercel projects**, not GitHub repo
 
 ## Isolate, then open a token
 
-1. Import only this repo: https://vercel.com/new/import?s=https://github.com/r3s0lv343vr/Bible-Prophecy-Website
+1. Install the Vercel GitHub app: https://github.com/apps/vercel
+2. Choose **Only select repositories** and add only `Bible-Prophecy-Website`. Do not grant All repositories.
+3. Import only this repo: https://vercel.com/new/import?s=https://github.com/r3s0lv343vr/Bible-Prophecy-Website
 2. Name the Vercel project `bible-prophecy-website`
 3. Copy that project’s org ID and project ID
 4. Create a token at https://vercel.com/account/tokens

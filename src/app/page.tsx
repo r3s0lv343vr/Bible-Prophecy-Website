@@ -1,5 +1,7 @@
 const thisRepo = "r3s0lv343vr/Bible-Prophecy-Website";
 const otherRepo = "r3s0lv343vr/Bible-Prophecy-Platform";
+const githubAppUrl = "https://github.com/apps/vercel";
+const githubInstallsUrl = "https://github.com/settings/installations";
 const importUrl =
   "https://vercel.com/new/import?s=https://github.com/r3s0lv343vr/Bible-Prophecy-Website";
 const tokenUrl = "https://vercel.com/account/tokens";
@@ -33,12 +35,28 @@ export default function AuthorizationPage() {
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <a
-          href={importUrl}
+          href={githubAppUrl}
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center justify-center rounded-full bg-[#7ef0ff]/12 px-6 py-3 text-sm font-medium text-[#7ef0ff] shadow-[0_0_0_1px_rgba(126,240,255,0.28),0_0_28px_rgba(126,240,255,0.16)]"
         >
-          Import Bible-Prophecy-Website
+          Install Vercel on GitHub
+        </a>
+        <a
+          href={githubInstallsUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center rounded-full border border-white/12 px-6 py-3 text-sm text-[#e8eefc]"
+        >
+          Configure existing install
+        </a>
+        <a
+          href={importUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center rounded-full border border-white/12 px-6 py-3 text-sm text-[#e8eefc]"
+        >
+          Then retry the import
         </a>
         <a
           href={tokenUrl}
@@ -51,7 +69,34 @@ export default function AuthorizationPage() {
       </div>
 
       <section className="mt-12">
-        <h2 className="text-2xl text-[#f5d67b]">1. Create this project first</h2>
+        <h2 className="text-2xl text-[#f5d67b]">1. Install the GitHub app first</h2>
+        <p className="mt-3 text-sm leading-7 text-[#9aa6c4]">
+          The red banner means Vercel is not allowed to see this GitHub repo
+          yet. The project name <code className="text-[#7ef0ff]">{projectName}</code> is
+          already correct. Do not Deploy until the banner is gone.
+        </p>
+        <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm leading-7 text-[#9aa6c4]">
+          <li>
+            Open <strong className="text-[#e8eefc]">Install Vercel on GitHub</strong>.
+          </li>
+          <li>
+            Choose <strong className="text-[#e8eefc]">Only select repositories</strong>.
+            Do not grant All repositories — that would also expose{" "}
+            <code className="text-[#f5d67b]">{otherRepo}</code>.
+          </li>
+          <li>
+            Add only <code className="text-[#7ef0ff]">{thisRepo}</code>. Save.
+          </li>
+          <li>
+            If Vercel is already installed, use{" "}
+            <strong className="text-[#e8eefc]">Configure existing install</strong>,
+            open Vercel, and add this one repo there.
+          </li>
+        </ol>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-2xl text-[#f5d67b]">2. Create this project</h2>
         <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm leading-7 text-[#9aa6c4]">
           <li>
             Open <strong className="text-[#e8eefc]">Import Bible-Prophecy-Website</strong>.
@@ -63,6 +108,10 @@ export default function AuthorizationPage() {
             <code className="text-[#7ef0ff]">{projectName}</code>. Do not reuse
             an existing Platform project.
           </li>
+          <li>
+            Change Application Preset from Other to{" "}
+            <code className="text-[#7ef0ff]">Next.js</code>.
+          </li>
           <li>Deploy once. The authorization page is enough for this step.</li>
           <li>
             In that project’s Settings, copy <code className="text-[#7ef0ff]">Project ID</code>{" "}
@@ -73,7 +122,7 @@ export default function AuthorizationPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-2xl text-[#f5d67b]">2. Scope the token to that project</h2>
+        <h2 className="text-2xl text-[#f5d67b]">3. Scope the token to that project</h2>
         <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm leading-7 text-[#9aa6c4]">
           <li>Open the token page.</li>
           <li>
