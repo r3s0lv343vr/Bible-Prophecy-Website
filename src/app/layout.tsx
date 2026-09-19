@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Outfit } from "next/font/google";
+import { Fraunces, Outfit, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -12,10 +12,18 @@ const fraunces = Fraunces({
   subsets: ["latin"],
 });
 
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Vercel authorization · Bible Prophecy Platform",
+  title: {
+    default: "Bible Prophecy Platform",
+    template: "%s · Bible Prophecy Platform",
+  },
   description:
-    "Open a Vercel token so this project can be shipped. The study build has not started.",
+    "A historicist study of Revelation. Table of contents, introduction, and the book itself.",
 };
 
 export default function RootLayout({
@@ -24,7 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${fraunces.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${outfit.variable} ${fraunces.variable} ${sourceSerif.variable} h-full antialiased`}
+    >
       <body className="min-h-full">{children}</body>
     </html>
   );

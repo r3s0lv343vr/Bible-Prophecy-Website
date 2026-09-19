@@ -1,7 +1,12 @@
-# Bible-Prophecy-Website
+# Bible Prophecy Platform
 
-The study build has not started. Follow `docs/VERCEL-GUIDE.md`.
+Historicist study of Revelation. Live on Vercel project `bible-prophecy-website`.
 
-Use only `r3s0lv343vr/Bible-Prophecy-Website` and Vercel project `bible-prophecy-website`. Do not touch `Bible-Prophecy-Platform`.
+## Now built
 
-The first Vercel deploy failed because it built an empty `main`. Current `main` has the Next.js app. Create a new deployment from latest `main`. Do not Redeploy the failed build.
+- Table of contents with bubble capsules and a right pane
+- Introduction: historical, theological, and how to approach the book
+- The Book of Revelation in its own window (`/read`) — NKJV/NIV licensed windows, KJV on site
+- Chapter 1: Christ in Control
+
+Chapters 2–6 are listed in the contents and not built out yet.
