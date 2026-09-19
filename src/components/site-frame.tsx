@@ -12,7 +12,7 @@ export function SiteFrame({ children }: { children: ReactNode }) {
             Bible Prophecy Platform
           </Link>
           <nav className="flex flex-wrap gap-2 text-sm">
-            <Link href="/" className="capsule">
+            <Link href="/contents" className="capsule">
               Contents
             </Link>
             <Link href="/introduction" className="capsule">

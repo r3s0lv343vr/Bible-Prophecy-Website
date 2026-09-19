@@ -10,7 +10,7 @@ export default function NotFound() {
         introduction, Chapter 1, or the book itself.
       </p>
       <div className="mt-6 flex flex-wrap gap-2">
-        <Link href="/" className="capsule capsule-blue text-sm">
+        <Link href="/contents" className="capsule capsule-blue text-sm">
           Table of contents
         </Link>
         <Link href="/read" target="_blank" className="capsule text-sm">
