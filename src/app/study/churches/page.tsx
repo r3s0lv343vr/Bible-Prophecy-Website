@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { ChurchHub } from "@/components/church-hub";
 import { SiteFrame } from "@/components/site-frame";
 
@@ -25,7 +26,9 @@ export default function ChurchesPage() {
         </Link>
       </div>
       <div className="mt-8">
-        <ChurchHub />
+        <Suspense>
+          <ChurchHub />
+        </Suspense>
       </div>
     </SiteFrame>
   );

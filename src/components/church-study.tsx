@@ -67,7 +67,7 @@ export function ChurchStudyHeader({ church }: { church: ChurchRecord }) {
         {church.name}
       </h1>
       <div className="mt-5 flex flex-wrap gap-2">
-        <Link href="/study/churches" className="capsule text-sm">
+        <Link href="/study/churches?tab=seven" className="capsule text-sm">
           The 7 Churches
         </Link>
         <Link

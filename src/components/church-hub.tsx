@@ -1,13 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ContentSlot } from "@/components/content-slot";
 import { StudyTabs } from "@/components/study-tabs";
 import { churches } from "@/content/churches";
 
+const hubTabs = ["profile", "seven", "table"] as const;
+
 export function ChurchHub() {
+  const searchParams = useSearchParams();
+  const requested = searchParams.get("tab");
+  const initialId = hubTabs.includes(requested as (typeof hubTabs)[number])
+    ? requested!
+    : "profile";
+
   return (
     <StudyTabs
+      key={initialId}
+      initialId={initialId}
       tabs={[
         {
           id: "profile",
