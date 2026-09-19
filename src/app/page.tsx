@@ -109,8 +109,9 @@ export default function AuthorizationPage() {
             an existing Platform project.
           </li>
           <li>
-            Change Application Preset from Other to{" "}
-            <code className="text-[#7ef0ff]">Next.js</code>.
+            Change Framework Preset from Other to{" "}
+            <code className="text-[#7ef0ff]">Next.js</code>. It is the
+            dropdown under the project name.
           </li>
           <li>Deploy once. The authorization page is enough for this step.</li>
           <li>
