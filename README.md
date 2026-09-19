@@ -1,29 +1,20 @@
-# Bible Prophecy Platform
+# Bible-Prophecy-Website
 
-The study build has not started. This repository currently holds only the Vercel authorization page so a token can be opened for later shipping.
+The study build has not started. This repository only holds the Vercel authorization page.
 
-## Authorization page
+This GitHub repo is `r3s0lv343vr/Bible-Prophecy-Website`. It is not `r3s0lv343vr/Bible-Prophecy-Platform`. Do not mix them.
 
-Run locally:
+## Why the repo is missing from Scope
 
-```bash
-npm install
-npm run dev
-```
+Vercel token Scope lists teams and existing **Vercel projects**, not GitHub repositories. Import this repo as its own Vercel project first, named `bible-prophecy-website`. Then Scope can target that project only.
 
-Open [http://localhost:3000](http://localhost:3000). Use **Open Vercel token page**, create a token, and return `VERCEL_TOKEN` in the agent chat. Do not commit the token.
+## Isolate, then open a token
 
-Official token page: https://vercel.com/account/tokens
-
-## Requirements to ship later
-
-- A Vercel account
-- Access to `r3s0lv343vr/Bible-Prophecy-Website`
-- `VERCEL_TOKEN`
-- After the first project exists: `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`
-
-```bash
-npx vercel --prod --yes --token "$VERCEL_TOKEN"
-```
+1. Import only this repo: https://vercel.com/new/import?s=https://github.com/r3s0lv343vr/Bible-Prophecy-Website
+2. Name the Vercel project `bible-prophecy-website`
+3. Copy that project’s org ID and project ID
+4. Create a token at https://vercel.com/account/tokens
+5. Scope it to `bible-prophecy-website` only — not Full Account, not All Projects, not Platform
+6. Return `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` in the agent chat
 
 Wait for the next build instruction before any Revelation or Daniel work.
