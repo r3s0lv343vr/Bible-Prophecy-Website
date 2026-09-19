@@ -60,16 +60,17 @@ export const tocItems: TocItem[] = [
   {
     id: "chapters-2-3",
     title: "Chapters 2 and 3: The Seven Churches",
-    ready: false,
+    ready: true,
+    studyHref: "/study/churches",
     structure: [
-      "Seven letters",
-      "Seven cities on the map",
-      "Seven movements of church history",
+      "The General Historical Profile of the Churches",
+      "The 7 Churches",
+      "Commendations and Rebukes",
     ],
     approach:
-      "This cluster will use a letters-and-map shell. It is listed now so the path is clear. The study itself waits for the next command.",
+      "Open the study. Church pages are shelled. Content for each church will be uploaded next.",
     overview:
-      "Ready in the table of contents. Not built out yet.",
+      "Three tabs at the door. Each church capsule opens its own set of tabs. The words, pictures, and virtual streets wait for the upload.",
   },
   {
     id: "chapters-4-5",

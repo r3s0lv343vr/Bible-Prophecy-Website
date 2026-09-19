@@ -49,10 +49,12 @@ export function ScriptureReader({ startChapter = 1 }: { startChapter?: number })
             <h1 className="font-display text-3xl sm:text-4xl">Chapter {chapter}</h1>
           </div>
           <Link
-            href={chapter === 1 ? "/study/1" : "/contents"}
+            href={chapter === 1 ? "/study/1" : chapter === 2 || chapter === 3 ? "/study/churches" : "/contents"}
             className="capsule text-sm"
           >
-            {chapter === 1 ? "Go to this study" : "Back to contents"}
+            {chapter === 1 || chapter === 2 || chapter === 3
+              ? "Go to this study"
+              : "Back to contents"}
           </Link>
         </div>
 
