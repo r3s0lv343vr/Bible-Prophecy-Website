@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ContentSlot } from "@/components/content-slot";
+import { CommendationsRebukesShell } from "@/components/commendations-rebukes-shell";
 import { StudyTabs } from "@/components/study-tabs";
 import { churchTabs, type ChurchRecord } from "@/content/churches";
 
@@ -38,6 +39,10 @@ function ChurchTabBody({
 
   if (tabId === "maps") {
     return <ContentSlot kind="map" label={`${church.name} · maps`} />;
+  }
+
+  if (tabId === "commendation-rebuke") {
+    return <CommendationsRebukesShell />;
   }
 
   if (tabId === "explore") {
