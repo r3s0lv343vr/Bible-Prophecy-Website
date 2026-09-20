@@ -137,3 +137,39 @@ a {
 .scripture p + p {
   margin-top: 0.8rem;
 }
+
+.folder-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.3rem;
+  align-items: flex-end;
+}
+
+.folder-tab {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: none;
+  border-radius: 0.85rem 0.85rem 0 0;
+  background: rgba(10, 12, 24, 0.38);
+  color: #d5dcf5;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  max-width: 11.5rem;
+  text-align: left;
+}
+
+.folder-tab-active {
+  background: rgba(10, 12, 24, 0.72);
+  box-shadow:
+    0 -8px 18px rgba(110, 231, 255, 0.12),
+    inset 0 1px 0 rgba(110, 231, 255, 0.35);
+  color: #eef2ff;
+}
+
+.folder-body {
+  background: rgba(10, 12, 24, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0 1.1rem 1.1rem 1.1rem;
+  padding: 1.1rem;
+  backdrop-filter: blur(16px);
+}

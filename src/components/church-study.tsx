@@ -8,6 +8,7 @@ import { churchTabs, type ChurchRecord } from "@/content/churches";
 export function ChurchStudy({ church }: { church: ChurchRecord }) {
   return (
     <StudyTabs
+      variant="folder"
       tabs={churchTabs.map((tab) => ({
         id: tab.id,
         label: tab.label,

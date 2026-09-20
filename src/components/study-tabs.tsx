@@ -8,8 +8,44 @@ export type StudyTab = {
   content: ReactNode;
 };
 
-export function StudyTabs({ tabs, initialId }: { tabs: StudyTab[]; initialId?: string }) {
+export function StudyTabs({
+  tabs,
+  initialId,
+  variant = "capsule",
+}: {
+  tabs: StudyTab[];
+  initialId?: string;
+  variant?: "capsule" | "folder";
+}) {
   const [active, setActive] = useState(initialId ?? tabs[0]?.id);
+
+  if (variant === "folder") {
+    return (
+      <div>
+        <div className="folder-tabs" role="tablist">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              role="tab"
+              aria-selected={active === tab.id}
+              onClick={() => setActive(tab.id)}
+              className={`folder-tab ${active === tab.id ? "folder-tab-active" : ""}`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <div className="folder-body">
+          {tabs.map((tab) => (
+            <div key={tab.id} hidden={tab.id !== active} role="tabpanel">
+              {tab.content}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
