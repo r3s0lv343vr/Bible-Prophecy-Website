@@ -5,6 +5,25 @@ export type SocietySection = {
   paragraphs: string[];
 };
 
+export type SocietyPicture = {
+  src: string;
+  kind: "society" | "artefact";
+};
+
+export const churchSocietyPictures: Partial<Record<ChurchId, SocietyPicture[]>> = {
+  ephesus: [
+    { src: "/images/churches/ephesus/01-columns-ruin.jpg", kind: "society" },
+    { src: "/images/churches/ephesus/02-artemis-statue.webp", kind: "artefact" },
+    { src: "/images/churches/ephesus/03-agora.jpg", kind: "society" },
+    { src: "/images/churches/ephesus/04-vaulted-arcade.jpg", kind: "society" },
+    { src: "/images/churches/ephesus/05-artemis-statue.jpg", kind: "artefact" },
+    { src: "/images/churches/ephesus/06-artemis-huntress.jpg", kind: "artefact" },
+    { src: "/images/churches/ephesus/07-arcade-fountain.jpg", kind: "society" },
+    { src: "/images/churches/ephesus/08-city-harbour.webp", kind: "society" },
+    { src: "/images/churches/ephesus/09-temple-model.jpg", kind: "society" },
+  ],
+};
+
 export const churchSocieties: Partial<Record<ChurchId, SocietySection[]>> = {
   ephesus: [
     {
