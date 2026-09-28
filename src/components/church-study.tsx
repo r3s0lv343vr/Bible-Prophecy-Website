@@ -5,7 +5,11 @@ import { ContentSlot } from "@/components/content-slot";
 import { CommendationsRebukesShell } from "@/components/commendations-rebukes-shell";
 import { StudyTabs } from "@/components/study-tabs";
 import { churchTabs, type ChurchRecord } from "@/content/churches";
-import { churchSocieties, type SocietySection } from "@/content/church-societies";
+import {
+  churchSocieties,
+  churchSocietyPictures,
+  type SocietySection,
+} from "@/content/church-societies";
 
 export function ChurchStudy({ church }: { church: ChurchRecord }) {
   return (
@@ -29,14 +33,32 @@ function ChurchTabBody({
 }) {
   if (tabId === "society") {
     const society = churchSocieties[church.id];
+    const pictures = churchSocietyPictures[church.id];
     return (
       <div className="grid gap-6">
         {society ? <SocietyArticle sections={society} /> : null}
         <div className="grid gap-4 md:grid-cols-2">
-          <ContentSlot kind="image" label={`${church.name} · society picture`} />
-          <ContentSlot kind="image" label={`${church.name} · society picture`} />
-          <ContentSlot kind="image" label={`${church.name} · artefact picture`} />
-          <ContentSlot kind="image" label={`${church.name} · artefact picture`} />
+          {pictures?.length ? (
+            pictures.map((picture) => (
+              <div
+                key={picture.src}
+                className="glass flex min-h-48 items-center justify-center overflow-hidden rounded-[1.4rem]"
+              >
+                <img
+                  src={picture.src}
+                  alt={`${church.name} · ${picture.kind === "artefact" ? "artefact picture" : "society picture"}`}
+                  className="block max-h-80 w-full object-contain"
+                />
+              </div>
+            ))
+          ) : (
+            <>
+              <ContentSlot kind="image" label={`${church.name} · society picture`} />
+              <ContentSlot kind="image" label={`${church.name} · society picture`} />
+              <ContentSlot kind="image" label={`${church.name} · artefact picture`} />
+              <ContentSlot kind="image" label={`${church.name} · artefact picture`} />
+            </>
+          )}
         </div>
       </div>
     );
