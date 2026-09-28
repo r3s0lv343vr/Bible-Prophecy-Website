@@ -5,6 +5,7 @@ import { ContentSlot } from "@/components/content-slot";
 import { CommendationsRebukesShell } from "@/components/commendations-rebukes-shell";
 import { StudyTabs } from "@/components/study-tabs";
 import { churchTabs, type ChurchRecord } from "@/content/churches";
+import { churchSocieties, type SocietySection } from "@/content/church-societies";
 
 export function ChurchStudy({ church }: { church: ChurchRecord }) {
   return (
@@ -27,12 +28,16 @@ function ChurchTabBody({
   church: ChurchRecord;
 }) {
   if (tabId === "society") {
+    const society = churchSocieties[church.id];
     return (
-      <div className="grid gap-4 md:grid-cols-2">
-        <ContentSlot kind="image" label={`${church.name} · society picture`} />
-        <ContentSlot kind="image" label={`${church.name} · society picture`} />
-        <ContentSlot kind="image" label={`${church.name} · artefact picture`} />
-        <ContentSlot kind="image" label={`${church.name} · artefact picture`} />
+      <div className="grid gap-6">
+        {society ? <SocietyArticle sections={society} /> : null}
+        <div className="grid gap-4 md:grid-cols-2">
+          <ContentSlot kind="image" label={`${church.name} · society picture`} />
+          <ContentSlot kind="image" label={`${church.name} · society picture`} />
+          <ContentSlot kind="image" label={`${church.name} · artefact picture`} />
+          <ContentSlot kind="image" label={`${church.name} · artefact picture`} />
+        </div>
       </div>
     );
   }
@@ -57,6 +62,25 @@ function ChurchTabBody({
   }
 
   return <ContentSlot label={`${church.name} · ${labelFor(tabId)}`} />;
+}
+
+function SocietyArticle({ sections }: { sections: SocietySection[] }) {
+  return (
+    <div className="space-y-8">
+      {sections.map((section) => (
+        <section key={section.title}>
+          <h2 className="font-display text-2xl leading-tight text-[#eef2ff] sm:text-3xl">
+            {section.title}
+          </h2>
+          {section.paragraphs.map((paragraph) => (
+            <p key={paragraph} className="mt-3 text-sm leading-7 text-[#d5dcf5]">
+              {paragraph}
+            </p>
+          ))}
+        </section>
+      ))}
+    </div>
+  );
 }
 
 function labelFor(tabId: string) {
