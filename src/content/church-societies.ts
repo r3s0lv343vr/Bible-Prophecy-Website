@@ -48,4 +48,18 @@ export const churchSocieties: Partial<Record<ChurchId, SocietySection[]>> = {
       ],
     },
   ],
+  smyrna: [
+    {
+      title: "Society of Smyrna",
+      paragraphs: [
+        "Smyrna was an ancient city on a small peninsula jutting out from Asia Minor into the Aegean Sea. It was originally established around 1000 BC by Aeolian Greek settlers in “Old Smyrna.” The famous Greek poet Homer, author of the epics the Iliad and the Odyssey, was probably born around 850 BC, and a shrine to Homer stood in the Roman period.",
+        "After the time of Alexander the Great in the late 4th century BC, a “new” Smyrna was built by the Seleucids along the coast and up the slopes of Mount Pagos. This region eventually became part of Asia Province during the Roman period, and Smyrna, between Ephesus and Pergamum, developed into a wealthy port city and one of the most important cities of the province, with a population of nearly 100,000 residents.",
+        "During the Roman period, Smyrna was apparently a city of great beauty and impressive architecture that circled Mount Pagus like a “crown.” Walking through the city, one would see the Ephesian gate, a gymnasium near the harbor, a stadium on the west side, and a theater holding 20,000 on the northwest mountain slope. There were temples to Zeus (including a large altar), Cybele the Mother Goddess near the harbor, Aphrodite, Dionysius, and the Emperors — probably Tiberius in AD 26 and Domitian before AD 96 — as well as the harbor, a library, and a massive agora with a bema on the west and a basilica on the north.",
+        "Smyrna was severely damaged by an earthquake in AD 178. The Roman-period city was repaired or rebuilt in the 2nd century AD. This wealthy city was also known for its exceptionally good wine, used for both enjoyment and medicinal purposes.",
+        "Like Ephesus, Smyrna competed for the title of “first of Asia” as well as for the right to build a temple for Tiberius. Because of its history with Rome, Smyrna was awarded the right, and later was awarded it again by Hadrian. Not only was it a city beloved by Rome for its patriotism, but it was also beloved by the people for its beauty. The design of the city itself was lauded, but of particular beauty was the “crown of Smyrna,” a street that encircled the top of Mt. Pagos.",
+        "Smyrna chose for itself the patron goddess Cybele, and depicted her on its currency as seated on a throne wearing a crown. Also lauded in Smyrna were its wines, its wealth, and its love of science and medicine.",
+        "While Smyrna was a jewel among the cities of Rome, there is a stark contrast between the love of itself and its rejection of Christians. Perhaps not at first, but over time the Roman empire came to despise and persecute the church there. The Smyrna we find in the first and second centuries AD was one where Christians were less and less welcome. They were excluded from jobs they needed and they suffered economically for it. Eventually Christians in Smyrna were even imprisoned or put to death, as was the case with Polycarp (AD 155–165).",
+      ],
+    },
+  ],
 };
