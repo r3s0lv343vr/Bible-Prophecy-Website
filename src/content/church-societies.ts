@@ -81,4 +81,21 @@ export const churchSocieties: Partial<Record<ChurchId, SocietySection[]>> = {
       ],
     },
   ],
+  thyatira: [
+    {
+      title: "Society of Thyatira",
+      paragraphs: [
+        "Leaving Pergamos, the Roman imperial road led to Thyatira, the city whose church received the fourth of the seven letters of Revelation.",
+        "Thyatira was founded about 300 B.C. by Seleucus I, Alexander’s general. In Roman times its chief deity was Apollo, the sun god. Zeus, Artemis, Demeter, and Athena were also worshiped there, and a coin of Vespasian suggests that a temple to the Emperor may have stood in the city by at least A.D. 79.",
+        "The city appears in Acts and Revelation as the hometown of Lydia, and later as one of the chief churches of Asia Minor (Acts 16:14; Revelation 2:18–29). Lydia, Paul’s first European convert at Philippi, had come from Thyatira. Paul himself may have brought the Gospel there during the three years he spent in the Province of Asia, most of that time in Ephesus (Acts 19:10; 20:31).",
+        "Inscriptions show a city of trade guilds: wool, linen, baking, slaves, leather, bronze, pottery, and dyes. One of its great industries was the dyeing of textiles. The purple of Thyatira was not the rare murex of the Mediterranean coast, but a cheaper “imitation” drawn from the madder root — easier to get, cheaper to make, and sold in volume. In modern times that dye is called “Turkey Red.” Its low cost and the scale of its production made the trade very profitable.",
+        "Lydia, who had moved from Thyatira to Philippi in Macedonia, worked in that trade as a seller of purple-dyed fabrics (Acts 16:14). An inscription at Philippi honors a purple-dye dealer from Thyatira who was patron to a citizen there. Others in the dye business, like Lydia, had made the same journey, and they were people of means.",
+        "Coins and inscriptions also show smiths, especially workers in bronze. Some of the city’s coins depict Hephaestus, blacksmith of the gods, with hammer and tongs at a helmet. Others show Demeter holding a fiery torch. The letter’s images of fire, fine bronze, a rod of iron, and broken pottery may be word pictures drawn from trades every Thyatiran knew (Revelation 2:18, 27).",
+        "First-century Thyatira was a pagan city, like many others in the Roman Empire. The letter to its church, however, names a particular danger: a false, self-proclaimed prophetess whom John calls “Jezebel,” after the pagan Phoenician queen of Israel, associated with harlotry and witchcraft (Revelation 2:20; 1 Kings 16:31; 2 Kings 9:22).",
+        "The “deep things of Satan” may point to the mystery religions — rites kept secret, opened only to initiates (Revelation 2:24). Demeter, one of the main goddesses of Thyatira, stood at the heart of the ancient Eleusinian Mysteries.",
+        "Thyatira also had a community of Jews. Some of them may have syncretized with paganism, as Israel did in the days of Jezebel. It is more likely that the letter uses the name as an illustration of the evil the prophetess was teaching inside the church.",
+        "Today the town’s central square holds a monument to Kemal Ataturk, Turkey’s national hero. The visitor searches in vain for anything that still speaks of the ancient city.",
+      ],
+    },
+  ],
 };
