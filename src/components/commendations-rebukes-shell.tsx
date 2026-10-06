@@ -1,4 +1,5 @@
 import { churches } from "@/content/churches";
+import { churchCommendations } from "@/content/church-commendations";
 
 export function CommendationsRebukesShell() {
   return (
@@ -13,13 +14,16 @@ export function CommendationsRebukesShell() {
             </tr>
           </thead>
           <tbody>
-            {churches.map((church) => (
-              <tr key={church.id} className="border-b border-white/8 last:border-0">
-                <td className="px-4 py-4 font-medium">{church.name}</td>
-                <td className="px-4 py-4 text-[#b7c0e0]">To be uploaded</td>
-                <td className="px-4 py-4 text-[#b7c0e0]">To be uploaded</td>
-              </tr>
-            ))}
+            {churches.map((church) => {
+              const entry = churchCommendations[church.id];
+              return (
+                <tr key={church.id} className="border-b border-white/8 last:border-0">
+                  <td className="px-4 py-4 font-medium">{church.name}</td>
+                  <td className="px-4 py-4 text-[#b7c0e0]">{entry.commendation}</td>
+                  <td className="px-4 py-4 text-[#b7c0e0]">{entry.rebuke}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
