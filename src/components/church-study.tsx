@@ -65,7 +65,15 @@ function ChurchTabBody({
   }
 
   if (tabId === "maps") {
-    return <ContentSlot kind="map" label={`${church.name} · maps`} />;
+    return (
+      <div className="glass flex min-h-80 items-center justify-center overflow-hidden rounded-[1.4rem]">
+        <img
+          src="/images/churches/seven-churches-map.jpg"
+          alt={`${church.name} · map of the seven churches`}
+          className="block w-full object-contain"
+        />
+      </div>
+    );
   }
 
   if (tabId === "commendation-rebuke") {
