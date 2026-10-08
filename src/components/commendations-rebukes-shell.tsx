@@ -1,5 +1,8 @@
 import { churches } from "@/content/churches";
-import { churchCommendations } from "@/content/church-commendations";
+import {
+  chiasticCommendations,
+  churchCommendations,
+} from "@/content/church-commendations";
 
 export function CommendationsRebukesShell() {
   return (
@@ -29,14 +32,20 @@ export function CommendationsRebukesShell() {
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <ChiasticColumn title="Commendations" />
-        <ChiasticColumn title="Rebukes" />
+        <ChiasticColumn title="Commendations" kind="commendation" />
+        <ChiasticColumn title="Rebukes" kind="rebuke" />
       </div>
     </div>
   );
 }
 
-function ChiasticColumn({ title }: { title: string }) {
+function ChiasticColumn({
+  title,
+  kind,
+}: {
+  title: string;
+  kind: "commendation" | "rebuke";
+}) {
   const indents = ["pl-0", "pl-6", "pl-12", "pl-16", "pl-12", "pl-6", "pl-0"];
 
   return (
@@ -46,14 +55,28 @@ function ChiasticColumn({ title }: { title: string }) {
         Chiastic structure
       </p>
       <ol className="mt-4 space-y-2">
-        {churches.map((church, index) => (
-          <li key={`${title}-${church.id}`} className={indents[index]}>
-            <div className="capsule w-full text-sm">
-              {church.name}
-              <span className="ml-2 text-[11px] text-[#b7c0e0]">To be uploaded</span>
-            </div>
-          </li>
-        ))}
+        {churches.map((church, index) => {
+          const notes =
+            kind === "commendation" ? chiasticCommendations[church.id] : undefined;
+
+          return (
+            <li key={`${title}-${church.id}`} className={indents[index]}>
+              <div className="capsule w-full text-sm">
+                {church.name}
+                {notes?.length ? null : (
+                  <span className="ml-2 text-[11px] text-[#b7c0e0]">To be uploaded</span>
+                )}
+              </div>
+              {notes?.length ? (
+                <div className="mt-2 space-y-2 text-[11px] leading-5 text-[#b7c0e0]">
+                  {notes.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              ) : null}
+            </li>
+          );
+        })}
       </ol>
     </section>
   );
