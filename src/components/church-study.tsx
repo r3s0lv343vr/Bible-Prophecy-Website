@@ -66,12 +66,21 @@ function ChurchTabBody({
 
   if (tabId === "maps") {
     return (
-      <div className="glass flex min-h-80 items-center justify-center overflow-hidden rounded-[1.4rem]">
-        <img
-          src="/images/churches/seven-churches-map.jpg"
-          alt={`${church.name} · map of the seven churches`}
-          className="block w-full object-contain"
-        />
+      <div className="grid gap-6">
+        <div className="glass flex min-h-80 items-center justify-center overflow-hidden rounded-[1.4rem]">
+          <img
+            src="/images/churches/seven-churches-map.jpg"
+            alt={`${church.name} · map of the seven churches`}
+            className="block w-full object-contain"
+          />
+        </div>
+        <div className="glass flex min-h-80 items-center justify-center overflow-hidden rounded-[1.4rem]">
+          <img
+            src="/images/churches/seven-churches-messenger-route.jpg"
+            alt={`${church.name} · route of messengers to the churches of Revelation`}
+            className="block w-full object-contain"
+          />
+        </div>
       </div>
     );
   }
