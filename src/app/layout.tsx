@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Fraunces, Outfit, Source_Serif_4 } from "next/font/google";
+import { VisitorTracker } from "@/components/visitor-tracker";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -36,7 +38,12 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${fraunces.variable} ${sourceSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        {children}
+        <Suspense>
+          <VisitorTracker />
+        </Suspense>
+      </body>
     </html>
   );
 }
