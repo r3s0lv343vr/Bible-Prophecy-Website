@@ -6,7 +6,7 @@ export const chapter1 = {
   beats: [
     {
       title: "A real island, a real prisoner",
-      body: "Patmos is still there, west of the Turkish coast. Exile was a Roman tool. The book does not open in a dream-world. It opens in a quarry and a Sunday that became the Lord’s Day.",
+      body: "Patmos is still there, west of the Turkish coast. Exile was a Roman tool. The book does not open in a dream-world. It opens in a quarry. Saturday, the Sabbath was known as the Lord’s Day.",
     },
     {
       title: "Christ, not chaos",
