@@ -1,0 +1,91 @@
+.heaven-doors {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 12%, #fff8e4 0%, #d7ecff 42%, #8ec4ef 100%);
+}
+
+.heaven-doors-stage {
+  position: relative;
+  width: min(100vw, calc(100dvh * 557 / 940));
+  height: min(100dvh, calc(100vw * 940 / 557));
+  perspective: 1800px;
+  transform-style: preserve-3d;
+}
+
+.heaven-doors-beyond {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heaven-doors-leaf {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform 1.75s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.heaven-doors-leaf.is-left {
+  left: 0;
+  background-position: left center;
+  transform-origin: left center;
+  box-shadow: inset -18px 0 28px rgba(80, 40, 0, 0.18);
+}
+
+.heaven-doors-leaf.is-right {
+  right: 0;
+  background-position: right center;
+  transform-origin: right center;
+  box-shadow: inset 18px 0 28px rgba(80, 40, 0, 0.18);
+}
+
+.heaven-doors-stage.is-opening .heaven-doors-leaf.is-left {
+  transform: rotateY(-98deg);
+}
+
+.heaven-doors-stage.is-opening .heaven-doors-leaf.is-right {
+  transform: rotateY(98deg);
+}
+
+.heaven-doors-hit {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.heaven-doors-hit:focus-visible {
+  outline: 3px solid rgba(255, 214, 102, 0.85);
+  outline-offset: -8px;
+}
+
+.heaven-doors-stage.is-opening .heaven-doors-hit,
+.heaven-doors-stage.is-opened .heaven-doors-hit {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heaven-doors-leaf {
+    transition: none;
+  }
+
+  .heaven-doors-stage.is-opening .heaven-doors-leaf.is-left,
+  .heaven-doors-stage.is-opening .heaven-doors-leaf.is-right {
+    transform: rotateY(0deg);
+    opacity: 0;
+  }
+}
