@@ -75,16 +75,17 @@ export const tocItems: TocItem[] = [
   {
     id: "chapters-4-5",
     title: "Chapters 4 and 5: The Coronation of the Lamb and The Seven Seals",
-    ready: false,
+    ready: true,
+    studyHref: "/study/4-5",
     structure: [
       "The throne",
       "The sealed book",
       "The Lamb takes the scroll",
     ],
     approach:
-      "Heaven’s control room opens before the seals ride. This study waits for the next command.",
+      "Heaven’s control room opens before the seals ride. The study begins at the doors.",
     overview:
-      "Ready in the table of contents. Not built out yet.",
+      "Go to Study opens the doors. The throne room waits for the next pictures.",
   },
   {
     id: "chapter-6",
