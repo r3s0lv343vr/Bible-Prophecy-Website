@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import "../room.css";
-import "./throne-room.css";
+import { ThroneScene } from "./throne-scene";
 
 export const metadata: Metadata = {
   title: "The throne room",
@@ -9,22 +7,12 @@ export const metadata: Metadata = {
 
 export default function ThroneRoomPage() {
   return (
-    <div className="throne-room">
-      <img
-        className="throne-room-image"
-        src="/images/chapters-4-5/throne.png"
-        alt=""
-      />
-      <Link href="/contents" className="capsule chapter-room-toc">
-        Table of contents
-      </Link>
-      <aside className="throne-scroll" aria-label="1">
-        <div className="throne-scroll-rod">
-          <span className="throne-scroll-name">1</span>
-        </div>
-        <div className="throne-scroll-sheet" />
-        <div className="throne-scroll-rod is-bottom" />
-      </aside>
-    </div>
+    <ThroneScene
+      imageSrc="/images/chapters-4-5/throne.png"
+      scrollName="1"
+      scrollText="Welcome to the Throne Room of God"
+      backHref="/study/4-5"
+      forwardHref="/study/4-5/throne/2"
+    />
   );
 }

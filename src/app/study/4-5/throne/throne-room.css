@@ -105,6 +105,50 @@
   backdrop-filter: blur(10px);
 }
 
+.throne-scroll-text {
+  margin: 0;
+  padding: 1.55rem 1.15rem 1.7rem;
+  color: #fff6d8;
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+  font-size: 1.12rem;
+  line-height: 1.55;
+  text-align: center;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+}
+
+.throne-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  z-index: 20;
+  display: flex;
+  gap: 0.7rem;
+  transform: translateX(-50%);
+}
+
+.throne-nav-btn {
+  display: grid;
+  place-items: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 999px;
+  color: #fff8dc;
+  text-decoration: none;
+  font-size: 1.35rem;
+  line-height: 1;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 250, 230, 0.9), transparent 42%),
+    linear-gradient(180deg, rgba(212, 168, 74, 0.72), rgba(18, 36, 48, 0.82));
+  box-shadow:
+    0 0 0 1px rgba(255, 228, 160, 0.55),
+    0 0 18px rgba(80, 240, 220, 0.28);
+}
+
+.throne-nav-btn.is-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
 @keyframes throne-scroll-drop {
   from {
     transform: translateY(-18%) scaleY(0.08);
