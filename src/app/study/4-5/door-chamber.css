@@ -1,0 +1,134 @@
+.door-chamber {
+  position: relative;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #120c14;
+}
+
+.door-chamber-world {
+  position: absolute;
+  inset: -12%;
+  background:
+    url("/images/chapters-4-5/doors-closed.png") center / cover no-repeat;
+  filter: blur(36px) saturate(1.05);
+  transform: scale(1.12);
+}
+
+.door-chamber-world::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 6, 14, 0.28);
+}
+
+.door-chamber-gate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(100vw, calc(100dvh * 557 / 940));
+  height: min(100dvh, calc(100vw * 940 / 557));
+  transform: translate(-50%, -50%);
+}
+
+.door-chamber-stage {
+  position: absolute;
+  inset: 0;
+  perspective: 2400px;
+  transform-style: preserve-3d;
+}
+
+.door-chamber-beyond {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.door-chamber-frame {
+  position: absolute;
+  inset: 0;
+  background: url("/images/chapters-4-5/doors-closed.png") center / 100% 100% no-repeat;
+  clip-path: polygon(
+    evenodd,
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 0%,
+    28.2% 23.4%,
+    71.8% 23.4%,
+    71.8% 84.2%,
+    28.2% 84.2%,
+    28.2% 23.4%
+  );
+}
+
+.door-chamber-leaf {
+  position: absolute;
+  inset: 0;
+  background: url("/images/chapters-4-5/doors-closed.png") center / 100% 100% no-repeat;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform 1.9s cubic-bezier(0.16, 0.82, 0.28, 1);
+  will-change: transform;
+}
+
+.door-chamber-leaf.is-left {
+  clip-path: inset(22.3% 50% 14.9% 27.45%);
+  transform-origin: 27.45% 54%;
+}
+
+.door-chamber-leaf.is-right {
+  clip-path: inset(22.3% 27.45% 14.9% 50%);
+  transform-origin: 72.55% 54%;
+}
+
+.door-chamber-stage.is-opening .door-chamber-leaf.is-left {
+  transform: rotateY(-104deg);
+}
+
+.door-chamber-stage.is-opening .door-chamber-leaf.is-right {
+  transform: rotateY(104deg);
+}
+
+.door-chamber-hit {
+  position: absolute;
+  top: 22.3%;
+  left: 27.45%;
+  width: 45.1%;
+  height: 62.8%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.door-chamber-hit:focus-visible {
+  outline: 3px solid rgba(255, 214, 102, 0.8);
+  outline-offset: 6px;
+}
+
+.door-chamber-stage.is-opening .door-chamber-hit,
+.door-chamber-stage.is-opened .door-chamber-hit {
+  pointer-events: none;
+}
+
+.door-chamber-vignette {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 46%, transparent 34%, rgba(8, 4, 12, 0.22) 68%, rgba(6, 3, 10, 0.55) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .door-chamber-leaf {
+    transition: none;
+  }
+
+  .door-chamber-stage.is-opening .door-chamber-leaf {
+    opacity: 0;
+    transform: none;
+  }
+}
