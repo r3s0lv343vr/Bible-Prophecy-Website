@@ -4,7 +4,6 @@ const PAGE_LABELS: Record<string, string> = {
   "/introduction": "Introduction",
   "/read": "Revelation",
   "/study/churches": "The Seven Churches",
-  "/study/4-5": "Chapters 4 and 5 · The doors",
 };
 
 export function pageLabel(page: string) {
