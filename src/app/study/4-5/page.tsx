@@ -7,8 +7,10 @@ export const metadata: Metadata = {
 
 export default function Chapters45RoomPage() {
   return (
-    <div className="chapter-room">
-      <img src="/images/chapters-4-5/room.png" alt="" />
-    </div>
+    <iframe
+      className="chapter-room"
+      src="/images/chapters-4-5/Heavenly_Gates_Arched_Animated.html"
+      title="Chapters 4 and 5"
+    />
   );
 }
