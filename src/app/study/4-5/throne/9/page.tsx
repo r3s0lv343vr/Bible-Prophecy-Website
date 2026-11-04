@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import { ThroneScene } from "../throne-scene";
+
+export const metadata: Metadata = {
+  title: "The throne room",
+};
+
+export default function ThroneRoomSceneNinePage() {
+  return (
+    <ThroneScene
+      imageSrc="/images/chapters-4-5/throne-9.png"
+      scrollName="9"
+      backHref="/study/4-5/throne/8"
+    />
+  );
+}
