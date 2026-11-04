@@ -12,6 +12,7 @@ const PAGE_LABELS: Record<string, string> = {
   "/study/4-5/throne/5": "Chapters 4 and 5 · The throne room",
   "/study/4-5/throne/6": "Chapters 4 and 5 · The throne room",
   "/study/4-5/throne/7": "Chapters 4 and 5 · The throne room",
+  "/study/4-5/throne/8": "Chapters 4 and 5 · The throne room",
 };
 
 export function pageLabel(page: string) {
