@@ -52,9 +52,9 @@ export function SceneNine() {
         <Link href="/study/4-5/throne/8" className="throne-nav-btn" aria-label="Back">
           ←
         </Link>
-        <span className="throne-nav-btn is-disabled" aria-disabled="true">
+        <Link href="/study/4-5/throne/10" className="throne-nav-btn" aria-label="Forward">
           →
-        </span>
+        </Link>
       </nav>
     </div>
   );
