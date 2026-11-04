@@ -11,6 +11,7 @@ export default function ThroneRoomSceneSixPage() {
       imageSrc="/images/chapters-4-5/throne-6.png"
       scrollName="6"
       backHref="/study/4-5/throne/5"
+      forwardHref="/study/4-5/throne/7"
     />
   );
 }
