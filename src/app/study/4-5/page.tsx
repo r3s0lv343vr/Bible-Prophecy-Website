@@ -11,7 +11,7 @@ export default function Chapters45RoomPage() {
     <>
       <iframe
         className="chapter-room"
-        src="/images/chapters-4-5/Heavenly_Gates_Arched_Animated.html"
+        src="/images/chapters-4-5/Heavenly_Gates_Arched_Animated.html?v=fast"
         title="Chapters 4 and 5"
       />
       <Link href="/contents" className="capsule chapter-room-toc">

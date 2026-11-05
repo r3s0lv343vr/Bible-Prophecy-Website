@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { PreloadImage, SceneImage } from "@/components/scene-image";
 import "../room.css";
 import "./throne-room.css";
 
@@ -10,16 +11,13 @@ export function SceneNine() {
 
   return (
     <div className="throne-room">
+      <PreloadImage src="/images/chapters-4-5/throne-10.webp" />
       <div className="throne-room-stack">
-        <img
-          className="throne-room-image"
-          src="/images/chapters-4-5/throne-9.png"
-          alt=""
-        />
-        <img
+        <SceneImage src="/images/chapters-4-5/throne-9.webp" className="throne-room-image" />
+        <SceneImage
+          src="/images/chapters-4-5/throne-9-christ.webp"
           className={`throne-room-image throne-room-overlay${showChrist ? " is-visible" : ""}`}
-          src="/images/chapters-4-5/throne-9-christ.png"
-          alt=""
+          priority={false}
         />
       </div>
       <div className="throne-jewels" aria-label="Reveal">
