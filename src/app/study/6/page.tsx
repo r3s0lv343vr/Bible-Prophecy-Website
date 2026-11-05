@@ -11,7 +11,7 @@ export default function Chapter6RoomPage() {
     <>
       <iframe
         className="chapter-room"
-        src="/images/chapter-6/index.html?v=seal-2"
+        src="/images/chapter-6/index.html?v=seal-3"
         title="Chapter 6"
       />
       <Link href="/contents" className="capsule chapter-room-toc">

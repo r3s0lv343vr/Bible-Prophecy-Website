@@ -10,6 +10,7 @@ export default function Chapter6SealTwoPage() {
     <SealScene
       imageSrc="/images/chapter-6/seal-2.png"
       backHref="/study/6/1"
+      nextHref="/study/6/3"
     />
   );
 }
