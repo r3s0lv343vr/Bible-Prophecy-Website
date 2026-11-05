@@ -90,15 +90,16 @@ export const tocItems: TocItem[] = [
   {
     id: "chapter-6",
     title: "Chapter 6: The Revelation of the Seven Seals",
-    ready: false,
+    ready: true,
+    studyHref: "/study/6",
     structure: [
       "The first six seals",
       "History on the ground",
       "Evidence of fulfillment",
     ],
     approach:
-      "After Chapter 6 is built, the site is inspected, then Hostinger is considered. That work waits for your command.",
+      "The seals open from the scroll. Go to Study opens the room.",
     overview:
-      "Ready in the table of contents. Not built out yet.",
+      "Go to Study opens the clickable scroll. Seal windows wait for the next content.",
   },
 ];
