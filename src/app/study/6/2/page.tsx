@@ -6,5 +6,10 @@ export const metadata: Metadata = {
 };
 
 export default function Chapter6SealTwoPage() {
-  return <SealScene backHref="/study/6/1" />;
+  return (
+    <SealScene
+      imageSrc="/images/chapter-6/seal-2.png"
+      backHref="/study/6/1"
+    />
+  );
 }
