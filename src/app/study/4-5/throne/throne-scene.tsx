@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { PreloadImage, SceneImage } from "@/components/scene-image";
+import { nextSceneImage } from "@/lib/scene-image";
 import "../room.css";
 import "./throne-room.css";
 
@@ -17,7 +19,8 @@ export function ThroneScene({
 }) {
   return (
     <div className="throne-room">
-      <img className="throne-room-image" src={imageSrc} alt="" />
+      <PreloadImage src={nextSceneImage(forwardHref)} />
+      <SceneImage src={imageSrc} className="throne-room-image" />
       <Link href="/contents" className="capsule chapter-room-toc">
         Table of contents
       </Link>

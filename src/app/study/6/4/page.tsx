@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Chapter6SealFourPage() {
   return (
     <SealScene
-      imageSrc="/images/chapter-6/seal-4.png"
+      imageSrc="/images/chapter-6/seal-4.webp"
       backHref="/study/6/3"
     />
   );

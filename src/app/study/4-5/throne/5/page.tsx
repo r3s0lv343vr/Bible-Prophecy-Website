@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function ThroneRoomSceneFivePage() {
   return (
     <ThroneScene
-      imageSrc="/images/chapters-4-5/throne-5.png"
+      imageSrc="/images/chapters-4-5/throne-5.webp"
       scrollName="5"
       backHref="/study/4-5/throne/4"
       forwardHref="/study/4-5/throne/6"
