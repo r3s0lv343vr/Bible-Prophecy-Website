@@ -6,6 +6,8 @@ const PAGE_LABELS: Record<string, string> = {
   "/study/churches": "The Seven Churches",
   "/study/4-5": "Chapters 4 and 5 · The room",
   "/study/6": "Chapter 6 · The seven seals",
+  "/study/6/1": "Chapter 6 · Seal 1",
+  "/study/6/2": "Chapter 6 · Seal 2",
   "/study/4-5/throne": "Chapters 4 and 5 · The throne room",
   "/study/4-5/throne/2": "Chapters 4 and 5 · The throne room",
   "/study/4-5/throne/3": "Chapters 4 and 5 · The throne room",
