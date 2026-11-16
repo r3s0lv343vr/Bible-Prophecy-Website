@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { PreloadImage, SceneImage } from "@/components/scene-image";
+import { nextSceneImage } from "@/lib/scene-image";
 import "./room.css";
 
 export function SealScene({
@@ -12,9 +14,8 @@ export function SealScene({
 }) {
   return (
     <div className="seal-scene">
-      {imageSrc ? (
-        <img className="seal-scene-image" src={imageSrc} alt="" />
-      ) : null}
+      <PreloadImage src={nextSceneImage(nextHref)} />
+      {imageSrc ? <SceneImage src={imageSrc} className="seal-scene-image" /> : null}
       <Link href="/contents" className="capsule chapter-room-toc">
         Table of contents
       </Link>
